@@ -14,6 +14,7 @@ sudo chmod 777 /var/run/docker.sock
 SonarQube:
 - Stworzyć webhooka w sonarze na adres `http://jenkins-env:8080/sonarqube-webhook`
 - Stworzyć nowy token o nazwie `SONARQUBE_TOKEN`
+
 Jenkins:
 - Wkleić token z SonarQube do Jenkinsa jako secret text o nazwie `SONARQUBE_TOKEN`
 - Wkleić hasło do Docker Hub'a jako secret text o nazwie `DOCKER_HUB_PASSWORD`
