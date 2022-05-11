@@ -25,7 +25,6 @@ services:
       - docker_network
   selenium:
     image: selenium/hub
-    platform: linux/x86_64
     container_name: selenium-env
     ports:
     - "4442:4442"
