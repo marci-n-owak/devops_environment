@@ -23,7 +23,7 @@ services:
       - ./volumes/sonar/sonarqube_logs:/opt/sonarqube/logs
     networks:
       - docker_network
-  selenium_hub:
+  selenium:
     image: selenium/hub
     platform: linux/x86_64
     container_name: selenium-env
@@ -37,7 +37,7 @@ services:
     image: selenium/node-firefox
     container_name: firefox-env
     depends_on:
-    - selenium_hub
+    - selenium
     environment:
     - SE_EVENT_BUS_HOST=selenium-env
     - SE_EVENT_BUS_PUBLISH_PORT=4442
